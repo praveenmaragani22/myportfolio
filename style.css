@@ -371,3 +371,33 @@ footer {
 .contact-form button.btn:hover {
   background: #0099dd;
 }
+/* Mobile responsive adjustments */
+@media screen and (max-width: 768px) {
+  .name-heading {
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: center;
+    white-space: normal; /* Allow wrapping but control it */
+    word-break: break-word;
+    padding: 0 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navbar a {
+    margin: 5px 0;
+  }
+
+  .hero-section {
+    padding: 20px;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+}
