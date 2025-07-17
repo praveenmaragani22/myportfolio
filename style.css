@@ -374,12 +374,17 @@ footer {
 /* Mobile responsive adjustments */
 @media screen and (max-width: 768px) {
   .name-heading {
-    font-size: 28px;
-    line-height: 1.2;
+    font-size: 24px;
+    line-height: 1.4;
     text-align: center;
-    white-space: normal; /* Allow wrapping but control it */
-    word-break: break-word;
-    padding: 0 10px;
+    white-space: normal;
+    word-break: normal;
+    display: block;
+    writing-mode: horizontal-tb !important; /* override any vertical layout */
+  }
+
+  .name-heading span {
+    display: inline !important; /* in case each letter is wrapped in span */
   }
 
   .navbar {
