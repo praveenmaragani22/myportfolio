@@ -372,37 +372,42 @@ footer {
   background: #0099dd;
 }
 /* Mobile responsive adjustments */
-@media screen and (max-width: 768px) {
-  .name-heading {
-    font-size: 24px;
-    line-height: 1.4;
-    text-align: center;
-    white-space: normal;
-    word-break: normal;
+/* Default style for header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Logo (Your name) */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap; /* Prevents name from breaking */
+}
+
+/* Hamburger menu */
+.menu-toggle {
+  font-size: 28px;
+  cursor: pointer;
+  display: none; /* hidden by default for desktop */
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .menu-toggle {
     display: block;
-    writing-mode: horizontal-tb !important; /* override any vertical layout */
-  }
-
-  .name-heading span {
-    display: inline !important; /* in case each letter is wrapped in span */
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .navbar a {
-    margin: 5px 0;
-  }
-
-  .hero-section {
-    padding: 20px;
-  }
-
-  .profile-pic {
-    width: 200px;
-    height: 200px;
   }
 }
