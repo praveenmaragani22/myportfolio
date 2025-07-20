@@ -19,9 +19,3 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
   this.reset();
 });
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById('navLinks');
-    nav.classList.toggle('active');
-  }
-</script>
